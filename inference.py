@@ -27,13 +27,13 @@ def inference(input_data: np.ndarray) -> None:
     predicted_output = model.forward()
 
     # Print the raw inference result
-    print(f"Inference Result (raw): {predicted_output}")
+    
 
     # Add condition to print 1 if output > 85, otherwise print 0
-    if predicted_output > 85:
-        print(1)
+    if predicted_output > 0.85:
+        print(f"Inference Result: {1}")
     else:
-        print(0)
+        print(f"Inference Result: {0}")
 
 if __name__ == "__main__":
     """
